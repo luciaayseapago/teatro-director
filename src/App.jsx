@@ -31,7 +31,13 @@ const App = () => {
     { id: 18, nombre: "Carme Chaparro", popularidad: 73, precio: 3800, descripcion: "Presentadora y reportera de renombre" },
     { id: 19, nombre: "Elsa Pataky", popularidad: 80, precio: 7000, descripcion: "Actriz española de cine de acción" },
     { id: 20, nombre: "Marina Salas", popularidad: 76, precio: 5200, descripcion: "Actriz española de series de Netflix" },
-    
+     // Actores de segunda
+    { id: 26, nombre: "Manu Rivas", popularidad: 57, precio: 1100, descripcion: "Famoso tiktoker e influencer" },
+    { id: 27, nombre: "Maria Abad", popularidad: 10, precio: 500, descripcion: "Profesora de lengua y de teatro" },
+    { id: 28, nombre: "Natalia Hernández", popularidad: 20, precio: 750, descripcion: "Actor teatral emergente" },
+    { id: 29, nombre: "Sara Nieto", popularidad: 55, precio: 1000, descripcion: "Actriz y pintora" },
+    { id: 30, nombre: "Lydia Garcia", popularidad: 65, precio: 1200, descripcion: "Actriz joven con potencial en teatro" },
+  ];
     // Actores teatrales
     { id: 21, nombre: "José Luis Gómez", popularidad: 79, precio: 6800, descripcion: "Actor de teatro clásico español" },
     { id: 22, nombre: "Charo López", popularidad: 74, precio: 4800, descripcion: "Actriz veterana de teatro español" },
