@@ -3,30 +3,61 @@ import './App.css';
 
 const App = () => {
   // =============================================
-  // GAME DATA
+  // GAME DATA - ACTORES REALES
   // =============================================
   const ACTORES = [
-    { id: 1, nombre: "Marcos Ruiz", popularidad: 10, precio: 500, descripcion: "Actor amateur, recién llegado" },
-    { id: 2, nombre: "Laura Díaz", popularidad: 25, precio: 1200, descripcion: "Actriz local con algo de experiencia" },
-    { id: 3, nombre: "Carlos Vega", popularidad: 40, precio: 2500, descripcion: "Actor de teatro regional conocido" },
-    { id: 4, nombre: "Sofía Montero", popularidad: 55, precio: 4000, descripcion: "Actriz de televisión regional" },
-    { id: 5, nombre: "Diego Herrera", popularidad: 70, precio: 7000, descripcion: "Actor de cine independiente" },
-    { id: 6, nombre: "Elena Castillo", popularidad: 85, precio: 12000, descripcion: "Estrella del teatro nacional" },
-    { id: 7, nombre: "Rodrigo Alvarado", popularidad: 95, precio: 20000, descripcion: "Leyenda del teatro, muy solicitado" },
+    // Actores españoles
+    { id: 1, nombre: "Pablo Alborán", popularidad: 72, precio: 3500, descripcion: "Cantante y actor español" },
+    { id: 2, nombre: "Nicole Wallace", popularidad: 85, precio: 8000, descripcion: "Actriz argentina-española, conocida por sus papeles en TV" },
+    { id: 3, nombre: "Gabriel Guevara", popularidad: 78, precio: 6500, descripcion: "Actor español, protagonista de series populares" },
+    { id: 4, nombre: "Belén Rueda", popularidad: 88, precio: 12000, descripcion: "Actriz española ganadora de múltiples premios" },
+    { id: 5, nombre: "Juan Echanove", popularidad: 82, precio: 9500, descripcion: "Actor veterano español de cine y televisión" },
+    { id: 6, nombre: "Marta Hazas", popularidad: 80, precio: 7500, descripcion: "Actriz española protagonista de series internacionales" },
+    { id: 7, nombre: "Luis Tosar", popularidad: 85, precio: 10000, descripcion: "Actor gallego de cine de prestigio" },
+    { id: 8, nombre: "Tristán Ulloa", popularidad: 76, precio: 5500, descripcion: "Actor español de cine y teatro" },
+    { id: 9, nombre: "Blanca Portillo", popularidad: 84, precio: 11000, descripcion: "Actriz española premiada en festivales" },
+    { id: 10, nombre: "Eduard Fernández", popularidad: 86, precio: 13000, descripcion: "Actor catalán de renombre internacional" },
+    
+    // Actores internacionales
+    { id: 11, nombre: "Javier Bardem", popularidad: 95, precio: 35000, descripcion: "Actor oscuro español de alcance mundial" },
+    { id: 12, nombre: "Penélope Cruz", popularidad: 94, precio: 40000, descripcion: "Actriz española ganadora de Óscar" },
+    { id: 13, nombre: "Antonio Banderas", popularidad: 92, precio: 32000, descripcion: "Leyenda del cine español e internacional" },
+    { id: 14, nombre: "Pedro Pascal", popularidad: 91, precio: 28000, descripcion: "Actor chileno-español de éxito en Hollywood" },
+    
+    // Actores emergentes
+    { id: 15, nombre: "Aitana Ocaña", popularidad: 68, precio: 2800, descripcion: "Cantante y actriz de OT, en auge" },
+    { id: 16, nombre: "Dani Rovira", popularidad: 75, precio: 4500, descripcion: "Humorista y actor español" },
+    { id: 17, nombre: "Jordi Évole", popularidad: 70, precio: 3200, descripcion: "Periodista y presentador con experiencia en TV" },
+    { id: 18, nombre: "Carme Chaparro", popularidad: 73, precio: 3800, descripcion: "Presentadora y reportera de renombre" },
+    { id: 19, nombre: "Elsa Pataky", popularidad: 80, precio: 7000, descripcion: "Actriz española de cine de acción" },
+    { id: 20, nombre: "Marina Salas", popularidad: 76, precio: 5200, descripcion: "Actriz española de series de Netflix" },
+    
+    // Actores teatrales
+    { id: 21, nombre: "José Luis Gómez", popularidad: 79, precio: 6800, descripcion: "Actor de teatro clásico español" },
+    { id: 22, nombre: "Charo López", popularidad: 74, precio: 4800, descripcion: "Actriz veterana de teatro español" },
+    { id: 23, nombre: "Paco Tójar", popularidad: 68, precio: 2500, descripcion: "Actor teatral emergente" },
+    { id: 24, nombre: "Sara Ballesteros", popularidad: 71, precio: 3100, descripcion: "Actriz de teatro contemporáneo" },
+    { id: 25, nombre: "Mauro Entrenas", popularidad: 65, precio: 1800, descripcion: "Actor joven con potencial en teatro" },
   ];
 
   const AUDITORIOS = [
-    { id: 1, nombre: "Sala del Barrio", capacidad: 50, precio: 300, prestigio: 5, descripcion: "Íntima pero sin glamour" },
-    { id: 2, nombre: "Teatro Municipal", capacidad: 200, precio: 1500, prestigio: 30, descripcion: "Bien equipado y conocido" },
-    { id: 3, nombre: "Gran Teatro Central", capacidad: 600, precio: 5000, prestigio: 60, descripcion: "Elegante con historia" },
-    { id: 4, nombre: "Palacio de las Artes", capacidad: 1500, precio: 15000, prestigio: 90, descripcion: "El más prestigioso" },
+    { id: 1, nombre: "Teatro Eslava", ciudad: "Madrid", capacidad: 280, precio: 1200, prestigio: 45, descripcion: "Íntimo teatro madrileño para obras experimentales" },
+    { id: 2, nombre: "Teatro Bellas Artes", ciudad: "Madrid", capacidad: 500, precio: 3500, prestigio: 70, descripcion: "Histórico teatro madrileño de prestigio" },
+    { id: 3, nombre: "Teatro Español", ciudad: "Madrid", capacidad: 750, precio: 8000, prestigio: 85, descripcion: "Teatro nacional español de renombre" },
+    { id: 4, nombre: "Teatro de la Zarzuela", ciudad: "Madrid", capacidad: 650, precio: 6500, prestigio: 80, descripcion: "Templo de la zarzuela madrileña" },
+    { id: 5, nombre: "Gran Teatre del Liceu", ciudad: "Barcelona", capacidad: 2000, precio: 12000, prestigio: 90, descripcion: "Opera house de categoría mundial" },
+    { id: 6, nombre: "Teatro Nacional de Cataluña", ciudad: "Barcelona", capacidad: 1100, precio: 9000, prestigio: 88, descripcion: "Escenario principal de artes escénicas catalanas" },
+    { id: 7, nombre: "Teatro Romea", ciudad: "Madrid", capacidad: 420, precio: 2800, prestigio: 65, descripcion: "Histórico teatro madrileño" },
+    { id: 8, nombre: "Teatre Tívoli", ciudad: "Barcelona", capacidad: 1900, precio: 11000, prestigio: 87, descripcion: "Gran escenario para musicales" },
+    { id: 9, nombre: "Teatro Principal", ciudad: "Valencia", capacidad: 1400, precio: 7500, prestigio: 82, descripcion: "Escenario principal de Valencia" },
+    { id: 10, nombre: "Teatro Calderón", ciudad: "Madrid", capacidad: 1700, precio: 10000, prestigio: 86, descripcion: "Imponente teatro para grandes producciones" },
   ];
 
   const TIPOS_PUBLICO = [
-    { tipo: "Familiar", multiplicador: 1.0, descripcion: "Prefieren comedias y musicales" },
-    { tipo: "Juvenil", multiplicador: 0.8, descripcion: "Buscan drama y acción" },
-    { tipo: "Adulto", multiplicador: 1.3, descripcion: "Aprecian el arte serio" },
-    { tipo: "Élite", multiplicador: 2.0, descripcion: "Muy exigentes pero pagan bien" },
+    { tipo: "Familiar", multiplicador: 1.0, descripcion: "Familias con niños. Prefieren comedias y musicales" },
+    { tipo: "Juvenil", multiplicador: 0.85, descripcion: "Jóvenes de 15-25 años. Buscan drama y acción" },
+    { tipo: "Adulto", multiplicador: 1.3, descripcion: "Adultos con poder adquisitivo. Aprecian el arte serio" },
+    { tipo: "Críticos", multiplicador: 1.8, descripcion: "Críticos y especialistas. Exigentes pero valoran calidad" },
   ];
 
   const GENEROS = ["Comedia", "Drama", "Musical", "Tragedia", "Thriller", "Romance", "Ciencia Ficción", "Terror"];
@@ -40,9 +71,44 @@ const App = () => {
   ];
 
   // =============================================
+  // TITULARES DE CRÍTICOS
+  // =============================================
+  const TITULARES_EXCELENTE = [
+    "\"Una obra de arte que no te puedes perder\", dice El País",
+    "\"Magistral. Uno de los estrenos del año\", El Mundo",
+    "\"Emocionante de principio a fin\", ABC",
+    "\"Una producción memorable\", La Vanguardia",
+    "\"El éxito de la temporada teatral\", Fotogramas",
+  ];
+
+  const TITULARES_BUENO = [
+    "\"Una propuesta interesante\", El Periódico",
+    "\"Buen trabajo del elenco\", Diario de Sevilla",
+    "\"Una noche de buen teatro\", El Correo",
+    "\"Entretenido y bien ejecutado\", Público",
+    "\"Recomendable para amantes del teatro\", Razón",
+  ];
+
+  const TITULARES_REGULAR = [
+    "\"Irregular pero con momentos destacables\", El País",
+    "\"Una obra que no termina de despegar\", El Mundo",
+    "\"Potencial sin aprovechar\", ABC",
+    "\"Entretenida aunque predecible\", La Vanguardia",
+    "\"Obra que deja indiferente\", Fotogramas",
+  ];
+
+  const TITULARES_MALO = [
+    "\"Decepcionante en todos los aspectos\", El País",
+    "\"Una gran pérdida de tiempo\", El Mundo",
+    "\"Insuficiente. Hay que mejorar\", ABC",
+    "\"No recomendable\", La Vanguardia",
+    "\"El fracaso de la temporada\", Fotogramas",
+  ];
+
+  // =============================================
   // ESTADOS
   // =============================================
-  const [fase, setFase] = useState('menu'); // menu, genero, preguntas, descripcion, publico, actores, auditorio, resultado
+  const [fase, setFase] = useState('menu');
   const [dinero, setDinero] = useState(5000);
   const [nivel, setNivel] = useState(1);
   const [xp, setXp] = useState(0);
@@ -58,6 +124,7 @@ const App = () => {
     auditorio: null,
     diasEnsayo: 7,
     horasPorDia: 4,
+    numFunciones: 1,
     presupuestoGastado: 0,
     respuestasPreguntas: [],
   });
@@ -106,31 +173,46 @@ const App = () => {
     return `Una obra de ${genero} ambientada en ${r[0] || 'lugar desconocido'}, con ${r[1] || 'varios'} personajes principales. La historia gira en torno a ${r[2] || 'un gran conflicto'}. Termina de forma ${r[3] || 'sorprendente'}, con un toque especial de ${r[4] || 'magia teatral'}.`;
   };
 
+  const obtenerTitularAleatorio = (critica) => {
+    let titulares;
+    if (critica >= 85) titulares = TITULARES_EXCELENTE;
+    else if (critica >= 65) titulares = TITULARES_BUENO;
+    else if (critica >= 45) titulares = TITULARES_REGULAR;
+    else titulares = TITULARES_MALO;
+    
+    return titulares[Math.floor(Math.random() * titulares.length)];
+  };
+
   const calcularResultadoObra = () => {
     const calidadEnsayo = calcularCalidadEnsayos(obraActual.diasEnsayo, obraActual.horasPorDia);
     const popElenco = calcularPopularidadElenco(obraActual.actores);
     const prestigioAud = obraActual.auditorio.prestigio;
 
     let critica = Math.floor(
-      calidadEnsayo * 0.4 + popElenco * 0.35 + prestigioAud * 0.25
+      calidadEnsayo * 0.35 + popElenco * 0.40 + prestigioAud * 0.25
     );
     critica = Math.max(0, Math.min(100, critica + Math.random() * 20 - 10));
 
     let pctAsistencia;
-    if (critica >= 80) pctAsistencia = 85 + Math.random() * 15;
-    else if (critica >= 60) pctAsistencia = 60 + Math.random() * 24;
-    else if (critica >= 40) pctAsistencia = 35 + Math.random() * 24;
-    else pctAsistencia = 10 + Math.random() * 24;
+    if (critica >= 85) pctAsistencia = 90 + Math.random() * 10;
+    else if (critica >= 70) pctAsistencia = 75 + Math.random() * 15;
+    else if (critica >= 55) pctAsistencia = 55 + Math.random() * 20;
+    else if (critica >= 40) pctAsistencia = 35 + Math.random() * 20;
+    else pctAsistencia = 15 + Math.random() * 25;
 
-    const asistentes = Math.floor(obraActual.auditorio.capacidad * pctAsistencia / 100);
-    const precioEntrada = Math.floor(15 * obraActual.tipoPublico.multiplicador * (1 + prestigioAud / 100));
-    const ingresosBrutos = asistentes * precioEntrada;
+    const capacidadPorFuncion = obraActual.auditorio.capacidad;
+    const asistentesPorFuncion = Math.floor(capacidadPorFuncion * pctAsistencia / 100);
+    const totalAsistentes = asistentesPorFuncion * obraActual.numFunciones;
+
+    const precioBase = 20;
+    const precioEntrada = Math.floor(precioBase * obraActual.tipoPublico.multiplicador * (1 + prestigioAud / 100));
+    const ingresosBrutos = totalAsistentes * precioEntrada;
     const costes = obraActual.presupuestoGastado;
     const ganancias = ingresosBrutos - costes;
-    const xpGanada = Math.floor(critica * 5 + asistentes * 0.1 + obraActual.actores.length * 10);
+    const xpGanada = Math.floor((critica * 5 + totalAsistentes * 0.05 + obraActual.actores.length * 10) * obraActual.numFunciones);
 
     let textoCritica = "Obra decente.";
-    if (critica >= 90) textoCritica = "¡OBRA MAESTRA! La crítica queda sin palabras.";
+    if (critica >= 90) textoCritica = "¡OBRA MAESTRA! Crítica unánime de aprobación.";
     else if (critica >= 75) textoCritica = "Excelente actuación. El público lo adoró.";
     else if (critica >= 60) textoCritica = "Buena obra. Algunos momentos brillantes.";
     else if (critica >= 45) textoCritica = "Obra decente. Le faltó algo de chispa.";
@@ -138,13 +220,17 @@ const App = () => {
     else textoCritica = "Un desastre escénico. Las críticas destrozan la obra.";
 
     const estrellas = Math.max(1, Math.min(5, Math.ceil(critica / 20)));
+    const titular = obtenerTitularAleatorio(critica);
 
     return {
       critica: Math.floor(critica),
       estrellas,
       textoCritica,
-      asistentes,
-      capacidad: obraActual.auditorio.capacidad,
+      titular,
+      asistentesPorFuncion,
+      totalAsistentes,
+      numFunciones: obraActual.numFunciones,
+      capacidad: capacidadPorFuncion,
       pctAsistencia: Math.floor(pctAsistencia),
       precioEntrada,
       ingresosBrutos,
@@ -182,6 +268,19 @@ const App = () => {
     setTitulo(nuevoTitulo);
     setDinero(d => d + res.ganancias);
     setObrasCompletadas(o => o + 1);
+  };
+
+  const handleReiniciarJuegoCompleto = () => {
+    if (window.confirm("⚠️ ¿Estás seguro? Perderás todo tu progreso.\n\nNo se puede deshacer.")) {
+      setDinero(5000);
+      setNivel(1);
+      setXp(0);
+      setObrasCompletadas(0);
+      setTitulo("Director Novato");
+      setFase('menu');
+      localStorage.removeItem('teatroDirector');
+      alert("✅ Juego reiniciado. ¡Vuelve a empezar!");
+    }
   };
 
   // =============================================
@@ -248,7 +347,7 @@ const App = () => {
     setFase('auditorio');
   };
 
-  const handleAlquilarAuditorio = (auditorio, diasEnsayo, horasPorDia) => {
+  const handleAlquilarAuditorio = (auditorio, diasEnsayo, horasPorDia, numFunciones) => {
     if (dinero < auditorio.precio) {
       alert(`No tienes suficiente dinero para alquilar ${auditorio.nombre}`);
       return;
@@ -259,14 +358,28 @@ const App = () => {
       auditorio,
       diasEnsayo,
       horasPorDia,
+      numFunciones,
       presupuestoGastado: prev.presupuestoGastado + auditorio.precio,
     }));
 
     // Calcular y mostrar resultado
-    const res = calcularResultadoObra();
-    procesarResultado(res);
-    setResultado(res);
-    setFase('resultado');
+    const nuevoObra = {
+      ...obraActual,
+      auditorio,
+      diasEnsayo,
+      horasPorDia,
+      numFunciones,
+      presupuestoGastado: obraActual.presupuestoGastado + auditorio.precio,
+    };
+    setObraActual(nuevoObra);
+
+    // Usar setTimeout para que se actualice el estado primero
+    setTimeout(() => {
+      const res = calcularResultadoObra();
+      procesarResultado(res);
+      setResultado(res);
+      setFase('resultado');
+    }, 0);
   };
 
   const handleReiniciar = () => {
@@ -279,6 +392,7 @@ const App = () => {
       auditorio: null,
       diasEnsayo: 7,
       horasPorDia: 4,
+      numFunciones: 1,
       presupuestoGastado: 0,
       respuestasPreguntas: [],
     });
@@ -387,7 +501,7 @@ const App = () => {
               className="boton boton-publico"
               onClick={() => handleSeleccionarPublico(pub)}
             >
-              {pub.tipo} <br /> ×{pub.multiplicador} precio entrada
+              {pub.tipo} <br /> ×{pub.multiplicador.toFixed(2)} precio entrada
             </button>
             <p className="card-descripcion">{pub.descripcion}</p>
           </div>
@@ -399,7 +513,7 @@ const App = () => {
   const PantallaActores = () => (
     <div className="pantalla">
       <h2>🎭 PASO 5/6 — Contratar actores</h2>
-      <p className="info-actores">💰 ${dinero} disponible | Actores contratados: {actoresSeleccionados.length}</p>
+      <p className="info-actores">💰 ${dinero.toLocaleString()} disponible | Actores contratados: {actoresSeleccionados.length}</p>
       <div className="lista-actores">
         {ACTORES.map(actor => {
           const yaContratado = actoresSeleccionados.some(a => a.id === actor.id);
@@ -416,7 +530,7 @@ const App = () => {
                   onClick={() => handleContratarActor(actor)}
                   disabled={dinero < actor.precio}
                 >
-                  ${actor.precio}
+                  ${actor.precio.toLocaleString()}
                 </button>
               ) : (
                 <span className="actor-check">✅ Contratado</span>
@@ -435,11 +549,12 @@ const App = () => {
     const [auditorioElegido, setAuditorioElegido] = useState(null);
     const [diasEnsayo, setDiasEnsayo] = useState(7);
     const [horasPorDia, setHorasPorDia] = useState(4);
+    const [numFunciones, setNumFunciones] = useState(1);
 
     return (
       <div className="pantalla">
-        <h2>🏛️ PASO 6/6 — Auditorio y ensayos</h2>
-        <p className="info-actores">💰 ${dinero} disponible</p>
+        <h2>🏛️ PASO 6/6 — Auditorio, ensayos y funciones</h2>
+        <p className="info-actores">💰 ${dinero.toLocaleString()} disponible</p>
 
         <h3>Selecciona el auditorio:</h3>
         <div className="grid-auditorios">
@@ -450,7 +565,7 @@ const App = () => {
               onClick={() => setAuditorioElegido(aud)}
             >
               {aud.nombre}<br/>
-              👥 {aud.capacidad} | ⭐ {aud.prestigio} | 💰 ${aud.precio}
+              📍 {aud.ciudad} | 👥 {aud.capacidad} | ⭐ {aud.prestigio} | 💰 ${aud.precio.toLocaleString()}
             </button>
           ))}
         </div>
@@ -482,9 +597,20 @@ const App = () => {
               onChange={(e) => setHorasPorDia(Number(e.target.value))}
             />
           </div>
+          <div className="config-grupo">
+            <label>Número de funciones: {numFunciones}</label>
+            <input
+              type="range"
+              min="1"
+              max="30"
+              value={numFunciones}
+              onChange={(e) => setNumFunciones(Number(e.target.value))}
+            />
+            <span className="hint-pequeño">Más funciones = más asistentes y ganancias</span>
+          </div>
         </div>
 
-        <p className="hint-texto">💡 Más días y horas = mayor calidad de actuación</p>
+        <p className="hint-texto">💡 Más días y horas = mayor calidad | Más funciones = más ingresos</p>
 
         <button
           className="boton boton-estrenar"
@@ -497,7 +623,7 @@ const App = () => {
               alert("No tienes suficiente dinero");
               return;
             }
-            handleAlquilarAuditorio(auditorioElegido, diasEnsayo, horasPorDia);
+            handleAlquilarAuditorio(auditorioElegido, diasEnsayo, horasPorDia, numFunciones);
           }}
         >
           🎬 ¡ESTRENAR LA OBRA!
@@ -517,11 +643,33 @@ const App = () => {
         <p className="estrellas-resultado">{estrellas} ({resultado.critica}/100)</p>
         <p className="critica-texto">{resultado.textoCritica}</p>
 
+        {/* TITULAR DE CRÍTICOS */}
+        <div className="titular-criticos">
+          <p className="titular-texto">"{resultado.titular}"</p>
+        </div>
+
         <div className="grid-stats">
           <div className="stat">
-            <span className="stat-label">👥 Asistentes</span>
-            <span className="stat-valor">{resultado.asistentes} / {resultado.capacidad}</span>
-            <span className="stat-pct">{resultado.pctAsistencia}%</span>
+            <span className="stat-label">🎭 Género</span>
+            <span className="stat-valor">{obraActual.genero}</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">🏛️ Teatro</span>
+            <span className="stat-valor">{obraActual.auditorio.nombre}</span>
+            <span className="stat-pct">{obraActual.auditorio.ciudad}</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">🎬 Funciones</span>
+            <span className="stat-valor">{resultado.numFunciones}</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">👥 Asistentes/función</span>
+            <span className="stat-valor">{resultado.asistentesPorFuncion.toLocaleString()}</span>
+            <span className="stat-pct">{resultado.pctAsistencia}% de capacidad</span>
+          </div>
+          <div className="stat">
+            <span className="stat-label">👥 Asistentes totales</span>
+            <span className="stat-valor">{resultado.totalAsistentes.toLocaleString()}</span>
           </div>
           <div className="stat">
             <span className="stat-label">🎭 Calidad ensayo</span>
@@ -537,15 +685,15 @@ const App = () => {
           </div>
           <div className="stat">
             <span className="stat-label">💵 Ingresos</span>
-            <span className="stat-valor">${resultado.ingresosBrutos}</span>
+            <span className="stat-valor">${resultado.ingresosBrutos.toLocaleString()}</span>
           </div>
           <div className="stat">
             <span className="stat-label">💸 Costes</span>
-            <span className="stat-valor">${resultado.costes}</span>
+            <span className="stat-valor">${resultado.costes.toLocaleString()}</span>
           </div>
           <div className={`stat ${resultado.ganancias >= 0 ? 'ganancia' : 'perdida'}`}>
             <span className="stat-label">💰 Ganancia neta</span>
-            <span className="stat-valor">{resultado.ganancias >= 0 ? '+' : ''}${resultado.ganancias}</span>
+            <span className="stat-valor">{resultado.ganancias >= 0 ? '+' : ''}${resultado.ganancias.toLocaleString()}</span>
           </div>
           <div className="stat">
             <span className="stat-label">✨ XP ganada</span>
@@ -585,6 +733,9 @@ const App = () => {
         <div className="estado-item">
           <span>🎭 Obras: {obrasCompletadas}</span>
         </div>
+        <button className="boton-reiniciar" onClick={handleReiniciarJuegoCompleto}>
+          🔄 Reiniciar
+        </button>
       </div>
 
       {/* CONTENIDO PRINCIPAL */}
